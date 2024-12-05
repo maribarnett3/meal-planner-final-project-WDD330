@@ -1,0 +1,45 @@
+.header {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--accent);
+  }
+  
+  .headerContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--primary);
+  }
+  
+  .navList {
+    display: flex;
+    list-style-type: none;
+    gap: 2rem;
+    align-items: center;
+  }
+  
+  .navList a,
+  .navList button {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .navList a:hover,
+  .navList button:hover {
+    color: var(--secondary);
+  }
+  
+  .navList button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+  }

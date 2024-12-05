@@ -1,0 +1,93 @@
+.home {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+  
+  .hero {
+    text-align: center;
+    margin-top: 4rem;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: var(--secondary);
+  }
+  
+  .searchBar {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .searchBar input {
+    width: 300px;
+  }
+  
+  .featuredRecipes h2 {
+    margin-bottom: 2rem;
+  }
+  
+  .carousel {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+  }
+  
+  .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .slide.active {
+    opacity: 1;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .slideContent {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 1rem;
+  }
+  
+  .slideActions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .callToAction {
+    text-align: center;
+    padding: 4rem 0;
+    background-color: var(--accent);
+  }
+  
+  .callToAction h2 {
+    margin-bottom: 1rem;
+  }
+  
+  .callToAction p {
+    margin-bottom: 2rem;
+    color: var(--secondary);
+  }
+  
+  
