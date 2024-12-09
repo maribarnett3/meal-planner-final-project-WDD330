@@ -1,0 +1,47 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minimalist Recipe Finder & Meal Planner</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/index.css" />
+    <link rel="stylesheet" href="/css/search.css" />
+    <script src="/js/search.js" type="module"></script>
+  </head>
+<body >
+  <header class="divider" id="main-header"></header>
+  <main class="container">
+   
+    <div class=searchPage>
+        <h1>Search Recipes</h1>
+        <form onSubmit=handleSearch class=searchForm>
+          <input
+            type="text"
+            name="searchTerm"
+            placeholder="Enter ingredients or recipe name"
+          />
+          <select
+            value=dietaryPreference
+            onChange="(e) => setDietaryPreference(e.target.value)"
+          >
+            <option value="">Dietary Preference</option>
+            <option value="all">All</option>
+            <option value="vegetarian">Vegetarian</option>
+            <option value="vegan">Vegan</option>
+            <option value="gluten-free">Gluten-free</option>
+          </select>
+          <button id="searchBtn" type="submit">Search</button>
+        </form>
+  
+        <div class="grid">
+         
+        </div>
+      </div>
+
+      <footer id="main-footer"></footer>
+    </div>
+  </main>
+
+</body>
+
+</html>
