@@ -1,0 +1,46 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minimalist Recipe Finder & Meal Planner</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/index.css" />
+    <link rel="stylesheet" href="/css/meal-planner.css" />
+    <script src="/js/mealplanner.js" type="module"></script>
+  </head>
+<body >
+  <header class="divider" id="main-header"></header>
+  <main class="container">
+    <div class=mealPlanner>
+        <h1>Meal Planner</h1>
+        <div class=weekGrid>
+          <!-- {daysOfWeek.map((day) => (
+            <div key={day} class=dayCard>
+              <h3>{day}</h3>
+              <select
+                value={selectedMeals[day] || ""}
+                onChange="(e) => handleMealSelect(day, e.target.value)"
+              >
+                <option value="">Select a meal</option>
+                <option value="recipe1">Grilled Chicken Salad</option>
+                <option value="recipe2">Vegetarian Pasta</option>
+                <option value="recipe3">Salmon with Roasted Vegetables</option>
+              </select>
+            </div>
+          ))} -->
+        </div>
+        <div className={styles.generateList}>
+          <button onClick={generateShoppingList}>
+            Generate Shopping List
+          </button>
+        </div>
+      </div>
+      
+<!-- 
+      <footer id="main-footer"></footer> -->
+    </div>
+  </main>
+
+</body>
+
+</html>
