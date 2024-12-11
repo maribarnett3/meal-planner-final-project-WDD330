@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign Up - Minimalist Recipe Finder</title>
+  <link rel="stylesheet" href="/css/signup.css" />
+</head>
+<body>
+
+  <!-- Header with navigation (Login link) -->
+  <header class="divider" id="main-header">
+    <nav class="navbar">
+      <a href="/" class="logo">Recipe Finder</a>
+      <a href="/login/index.html" class="login-link">Already have an account? Login</a>
+    </nav>
+  </header>
+
+  <!-- Main Signup Form -->
+  <main class="container">
+    <section class="signup-form">
+      <h1>Create Your Account</h1>
+      <form id="signupForm">
+        <input type="text" id="username" name="username" placeholder="Username" required />
+        <input type="email" id="email" name="email" placeholder="Email" required />
+        <input type="password" id="password" name="password" placeholder="Password" required />
+        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required />
+        <button type="submit">Sign Up</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Link to Login if user already has an account -->
+  <footer>
+    <p>Already have an account? <a href="/login/index.html">Login here</a></p>
+  </footer>
+
+  <script src="js/signup.js"></script>
+</body>
+</html>

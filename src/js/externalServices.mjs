@@ -11,13 +11,25 @@ async function convertToJson(res) {
   }
 }
 
+export async function loginRequest(user) {
+  const options = {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(user),
+  };
+  const response = await fetch(baseURL + "login", options).then(convertToJson);
+  return response.accessToken;
+}
+
 export async function getRandomRecipes() {
   const requestOptions = {
     method: "GET",
     redirect: "follow",
   };
   const response = await fetch(
-    recipeURL + `random?limitLicense=true&apiKey=${recipeKey}&number=3`,
+    recipeURL + `random?limitLicense=true&fillIngredients=true&apiKey=${recipeKey}&number=3`,
     requestOptions
   );
   const data = await convertToJson(response);
@@ -31,7 +43,7 @@ export async function getRecipes(searchTerm) {
     redirect: "follow",
   };
   const response = await fetch(
-    recipeURL + `complexSearch?limitLicense=true&apiKey=${recipeKey}&addRecipeInformation=true&number=3&query=${searchTerm}`,
+    recipeURL + `complexSearch?limitLicense=true&fillIngredients=true&apiKey=${recipeKey}&addRecipeInformation=true&number=3&query=${searchTerm}`,
     requestOptions
   );
   const data = await convertToJson(response);

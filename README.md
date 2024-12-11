@@ -2,7 +2,9 @@
 
 ## Description
 
-
+## valid login
+- user1@email.com
+- password: "user1"
 
 ## Prerequisites
 

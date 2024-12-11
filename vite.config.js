@@ -12,6 +12,7 @@ export default defineConfig({
         search: resolve(__dirname, "src/search/index.html"),
         favorites: resolve(__dirname, "src/favorites/index.html"),
         "meal-planner": resolve(__dirname, "src/meal-planner/index.html"),
+        login: resolve(__dirname, "src/login/index.html"),
         
       },
     },
