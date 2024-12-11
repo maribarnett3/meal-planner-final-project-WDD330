@@ -14,6 +14,71 @@
     <div class=mealPlanner>
         <h1>Meal Planner</h1>
         <div class=weekGrid>
+          <div class="weekGrid">
+            <div class="dayCard">
+              <h3>Monday</h3>
+              <select class="mealSelect">
+                <option value="">Select a meal</option>
+                <option value="recipe1">Grilled Chicken Salad</option>
+                <option value="recipe2">Vegetarian Pasta</option>
+                <option value="recipe3">Salmon with Roasted Vegetables</option>
+              </select>
+            </div>
+            <div class="dayCard">
+              <h3>Tuesday</h3>
+              <select class="mealSelect">
+                <option value="">Select a meal</option>
+                <option value="recipe1">Grilled Chicken Salad</option>
+                <option value="recipe2">Vegetarian Pasta</option>
+                <option value="recipe3">Salmon with Roasted Vegetables</option>
+              </select>
+            </div>
+            <div class="dayCard">
+              <h3>Wednesday</h3>
+              <select class="mealSelect">
+                <option value="">Select a meal</option>
+                <option value="recipe1">Grilled Chicken Salad</option>
+                <option value="recipe2">Vegetarian Pasta</option>
+                <option value="recipe3">Salmon with Roasted Vegetables</option>
+              </select>
+            </div>
+            <div class="dayCard">
+              <h3>Thursday</h3>
+              <select class="mealSelect">
+                <option value="">Select a meal</option>
+                <option value="recipe1">Grilled Chicken Salad</option>
+                <option value="recipe2">Vegetarian Pasta</option>
+                <option value="recipe3">Salmon with Roasted Vegetables</option>
+              </select>
+            </div>
+            <div class="dayCard">
+              <h3>Friday</h3>
+              <select class="mealSelect">
+                <option value="">Select a meal</option>
+                <option value="recipe1">Grilled Chicken Salad</option>
+                <option value="recipe2">Vegetarian Pasta</option>
+                <option value="recipe3">Salmon with Roasted Vegetables</option>
+              </select>
+            </div>
+            <div class="dayCard">
+              <h3>Saturday</h3>
+              <select class="mealSelect">
+                <option value="">Select a meal</option>
+                <option value="recipe1">Grilled Chicken Salad</option>
+                <option value="recipe2">Vegetarian Pasta</option>
+                <option value="recipe3">Salmon with Roasted Vegetables</option>
+              </select>
+            </div>
+            <div class="dayCard">
+              <h3>Sunday</h3>
+              <select class="mealSelect">
+                <option value="">Select a meal</option>
+                <option value="recipe1">Grilled Chicken Salad</option>
+                <option value="recipe2">Vegetarian Pasta</option>
+                <option value="recipe3">Salmon with Roasted Vegetables</option>
+              </select>
+            </div>
+          </div>
           <!-- {daysOfWeek.map((day) => (
             <div key={day} class=dayCard>
               <h3>{day}</h3>
@@ -29,11 +94,12 @@
             </div>
           ))} -->
         </div>
-        <div className={styles.generateList}>
-          <button onClick={generateShoppingList}>
+        <div class=generateList>
+          <button id=generateShoppingList>
             Generate Shopping List
           </button>
         </div>
+        <div id="shoppingList"></div>
       </div>
       
 <!-- 
