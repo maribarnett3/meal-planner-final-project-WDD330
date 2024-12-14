@@ -1,6 +1,9 @@
 {
   "name": "mealplanner",
   "version": "3.0.0",
+  "engines": {
+    "node": "20"
+  },
   "description": "final WDD330 mealplanner project",
   "main": "main.js",
   "scripts": {
@@ -8,9 +11,9 @@
     "build": "vite build --emptyOutDir",
     "preview": "vite preview",
     "lint": "eslint *.js src/**/*.js",
-    "lint:fix": "eslint --fix *.js src/**/*.js",
-    "format": "prettier --ignore-path ./.gitignore --write \"./**/*.{html,json,js,ts,css}\"",
-    "test": "jest"
+    "lint:fix": "eslint --fix *.js src/**/*.{mjs,js}",
+    "format": "prettier --ignore-path ./.gitignore --write \"./**/*.{html,json,js,mjs,ts,css}\"",
+    "test": "vitest"
   },
   "author": "Shane Thompson",
   "license": "ISC",
@@ -19,8 +22,10 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
     "jest": "^29.2.2",
+    "jsdom": "^25.0.1",
     "prettier": "^2.7.1",
-    "vite": "^4.1.4"
+    "vite": "^4.1.4",
+    "vitest": "^2.1.8"
   },
   "babel": {
     "presets": [

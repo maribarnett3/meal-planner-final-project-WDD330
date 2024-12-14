@@ -2,6 +2,10 @@ import { resolve } from "path";
 import { defineConfig } from "vite";
 
 export default defineConfig({
+  test: {
+    environment: "jsdom",
+    globals: true,
+  },
   root: "src/",
 
   build: {
@@ -13,7 +17,6 @@ export default defineConfig({
         favorites: resolve(__dirname, "src/favorites/index.html"),
         "meal-planner": resolve(__dirname, "src/meal-planner/index.html"),
         login: resolve(__dirname, "src/login/index.html"),
-        
       },
     },
   },
