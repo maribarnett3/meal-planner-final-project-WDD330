@@ -1,32 +1,30 @@
 .mealPlanner {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-  }
-  
-  .weekGrid {
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  }
-  
-  .dayCard {
-    background-color: var(--background);
-    border: 1px solid var(--accent);
-    padding: 1rem;
-  }
-  
-  .dayCard h3 {
-    margin-bottom: 0.5rem;
-  }
-  
-  .dayCard select {
-    width: 100%;
-  }
-  
-  .generateList {
-    text-align: center;
-    margin-top: 2rem;
-  }
-  
-  
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.weekGrid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.dayCard {
+  background-color: var(--background);
+  border: 1px solid var(--accent);
+  padding: 1rem;
+}
+
+.dayCard h3 {
+  margin-bottom: 0.5rem;
+}
+
+.dayCard select {
+  width: 100%;
+}
+
+.generateList {
+  text-align: center;
+  margin-top: 2rem;
+}

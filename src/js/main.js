@@ -17,7 +17,6 @@ function setupSearchBtn() {
   searchBtn.addEventListener("click", () => navigateSearch());
 }
 
-
 function featuredRecipeCardNotLoggedInTemplate(item) {
   return `<div
         class="slide hidden" 
@@ -69,37 +68,40 @@ async function getFeaturedRecipes() {
        <li><a href="/meal-planner/">Meal Planner</a></li>
         <li><a href="/favorites/">Favorites</a></li>
         <li><a href="/login/index.html"><button id="loginBtn" class="login-btn">Logout</button></a></li>
-      `
-
+      `;
     } else {
       const navList = document.querySelector(".navList");
-      navList.innerHTML = `<li><a href="/login/index.html"><button id="loginBtn" class="login-btn">Login</button></a></li>`
+      navList.innerHTML = `<li><a href="/login/index.html"><button id="loginBtn" class="login-btn">Login</button></a></li>`;
     }
-      results = await getRandomRecipes();
-      console.log(results);
-      // debugger
-      if (results && results.length > 0) {
-        results = results.map((obj, index) => ({ ...obj, index }));
-        const el = document.querySelector(".carousel");
-        if(authResult)
+    results = await getRandomRecipes();
+    console.log(results);
+    // debugger
+    if (results && results.length > 0) {
+      results = results.map((obj, index) => ({ ...obj, index }));
+      const el = document.querySelector(".carousel");
+      if (authResult)
         renderListWithTemplate(featuredRecipeCardTemplate, el, results);
-      else 
-        renderListWithTemplate(featuredRecipeCardNotLoggedInTemplate, el, results);
+      else
+        renderListWithTemplate(
+          featuredRecipeCardNotLoggedInTemplate,
+          el,
+          results
+        );
 
-        setupCarousel();
-        const saveButtons = document.querySelectorAll(".saveButton");
+      setupCarousel();
+      const saveButtons = document.querySelectorAll(".saveButton");
 
-        saveButtons.forEach((button) => {
-          button.addEventListener("click", (e) => {
-            const index = e.target.dataset.index;
-            const recipe = results[index];
-            if (recipe) {
-              saveToFavorites(recipe);
-            }
-          });
+      saveButtons.forEach((button) => {
+        button.addEventListener("click", (e) => {
+          const index = e.target.dataset.index;
+          const recipe = results[index];
+          if (recipe) {
+            saveToFavorites(recipe);
+          }
         });
-        //
-      }
+      });
+      //
+    }
   } catch (error) {
     //
     console.log(error);
