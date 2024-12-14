@@ -58,10 +58,10 @@ export async function renderWithTemplate(
   if (clear) {
     parentElement.innerHTML = "";
   }
-  
+
   const htmlString = await templateFn(data);
   parentElement.insertAdjacentHTML(position, htmlString);
-  if (callback){
+  if (callback) {
     callback(data);
   }
 }
@@ -70,14 +70,13 @@ export function loadTemplate(path) {
   return async function () {
     const res = await fetch(path);
     if (res.ok) {
-    const html = await res.text();
-    return html;
+      const html = await res.text();
+      return html;
     }
   };
 }
 
 export async function loadHeaderFooter() {
-
   const headerTemplateFn = loadTemplate("/partials/header.html");
   const footerTemplateFn = loadTemplate("/partials/footer.html");
 
@@ -85,10 +84,8 @@ export async function loadHeaderFooter() {
   const footer = document.getElementById("main-footer");
 
   await renderWithTemplate(headerTemplateFn, header);
-  if (footer)
-  await renderWithTemplate(footerTemplateFn, footer);
+  if (footer) await renderWithTemplate(footerTemplateFn, footer);
 }
-
 
 export function alertMessage(message, scroll = true, duration = 3000) {
   const alert = document.createElement("div");

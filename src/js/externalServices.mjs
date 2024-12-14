@@ -29,7 +29,8 @@ export async function getRandomRecipes() {
     redirect: "follow",
   };
   const response = await fetch(
-    recipeURL + `random?limitLicense=true&fillIngredients=true&apiKey=${recipeKey}&number=3`,
+    recipeURL +
+      `random?limitLicense=true&fillIngredients=true&apiKey=${recipeKey}&number=3`,
     requestOptions
   );
   const data = await convertToJson(response);
@@ -37,13 +38,13 @@ export async function getRandomRecipes() {
 }
 
 export async function getRecipes(searchTerm) {
-  
   const requestOptions = {
     method: "GET",
     redirect: "follow",
   };
   const response = await fetch(
-    recipeURL + `complexSearch?limitLicense=true&fillIngredients=true&apiKey=${recipeKey}&addRecipeInformation=true&number=3&query=${searchTerm}`,
+    recipeURL +
+      `complexSearch?limitLicense=true&fillIngredients=true&apiKey=${recipeKey}&addRecipeInformation=true&number=3&query=${searchTerm}`,
     requestOptions
   );
   const data = await convertToJson(response);

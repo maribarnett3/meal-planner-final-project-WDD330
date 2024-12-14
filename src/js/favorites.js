@@ -2,13 +2,11 @@ import { loadHeaderFooter } from "./utils.mjs";
 import { getFavorites, removeFromFavorites } from "./favorites.mjs";
 import { renderListWithTemplate } from "./utils.mjs";
 
-
 // this loads the updateCartCount after the content is loaded
 document.addEventListener("DOMContentLoaded", () => {
   loadHeaderFooter().then(() => {
     // updateCartCount();
     renderFavorites();
-  
   });
 });
 let favorites = [];
@@ -23,9 +21,8 @@ function renderFavorites() {
     button.addEventListener("click", (e) => {
       const fIndex = e.target.dataset.index;
       removeFromFavorites(fIndex);
-      
-        renderFavorites();
-      
+
+      renderFavorites();
     });
   });
 }

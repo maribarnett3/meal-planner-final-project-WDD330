@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // });
   debugger;
   const result = checkLogin();
-  debugger
+  debugger;
   if (result) {
     //
   }

@@ -13,7 +13,7 @@
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   color: var(--text);
   background-color: var(--background);
   line-height: 1.6;
@@ -25,13 +25,18 @@ body {
   padding: 0 20px;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 600;
   margin-bottom: 1rem;
 }
 
 button {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   cursor: pointer;
   background-color: var(--primary);
   color: var(--background);
@@ -45,8 +50,9 @@ button:hover {
   background-color: var(--secondary);
 }
 
-input, select {
-  font-family: 'Inter', sans-serif;
+input,
+select {
+  font-family: "Inter", sans-serif;
   padding: 10px;
   border: 1px solid var(--accent);
   font-size: 1rem;
@@ -119,4 +125,3 @@ input, select {
   background-color: var(--secondary);
 }
 /* header section end  */
-

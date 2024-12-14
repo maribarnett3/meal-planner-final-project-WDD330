@@ -19,7 +19,7 @@ let favorites = [];
 function rendermealselection() {
   favorites = getFavorites();
   const mealSelects = document.querySelectorAll(".mealSelect");
-  let optionHTML = ' <option value="">Select a meal</option>';
+  let optionHTML = " <option value=\"\">Select a meal</option>";
   favorites.forEach((favorite) => {
     optionHTML += `<option value="${favorite.id}">${favorite.title}${
       favorite.extendedIngredients ? " ✔" : ""
@@ -59,6 +59,8 @@ function rendermealselection() {
       }
     });
     console.log(ingredients);
+    // order ingredients
+    ingredients = ingredients.sort((a, b) => a.name.localeCompare(b.name));
     const modal = document.querySelector("#shoppingList");
     const shoppingListTemplate = loadTemplate("/partials/shoppinglist.html");
     // const htmlString = list.map(templateFn);
@@ -82,5 +84,5 @@ function rendermealselection() {
 }
 
 function ingredientsTemplate(ingredient) {
-  return `<li data-key=${ingredient.id}>${ingredient.original}</li>`;
+  return `<li data-key=${ingredient.id}>${ingredient.original} (${ingredient.name})</li>`;
 }
