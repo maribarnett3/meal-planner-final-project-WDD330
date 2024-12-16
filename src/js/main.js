@@ -62,17 +62,6 @@ let results = [];
 async function getFeaturedRecipes() {
   try {
     const authResult = checkLogin();
-    if (authResult) {
-      const navList = document.querySelector(".navList");
-      navList.innerHTML = `
-       <li><a href="/meal-planner/">Meal Planner</a></li>
-        <li><a href="/favorites/">Favorites</a></li>
-        <li><a href="/login/index.html"><button id="loginBtn" class="login-btn">Logout</button></a></li>
-      `;
-    } else {
-      const navList = document.querySelector(".navList");
-      navList.innerHTML = `<li><a href="/login/index.html"><button id="loginBtn" class="login-btn">Login</button></a></li>`;
-    }
     results = await getRandomRecipes();
     console.log(results);
     // debugger

@@ -45,14 +45,12 @@ function searchRecipeResultTemplate(item) {
 
 async function runSearch() {
   const searchTerm = getParam("searchTerm");
-  debugger;
   if (searchTerm) {
     try {
       document.querySelector("[name='searchTerm']").value = searchTerm;
 
       let result = await getRecipes(searchTerm);
       console.log(result);
-      debugger;
       if (result && result.results && result.results.length > 0) {
         result.results = result.results.map((obj, index) => ({
           ...obj,

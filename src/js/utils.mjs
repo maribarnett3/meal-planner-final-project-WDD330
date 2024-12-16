@@ -1,3 +1,5 @@
+import { updateAuth } from "./auth.mjs";
+
 // wrapper for querySelector...returns matching element
 export function qs(selector, parent = document) {
   return parent.querySelector(selector);
@@ -85,6 +87,7 @@ export async function loadHeaderFooter() {
 
   await renderWithTemplate(headerTemplateFn, header);
   if (footer) await renderWithTemplate(footerTemplateFn, footer);
+  updateAuth();
 }
 
 export function alertMessage(message, scroll = true, duration = 3000) {

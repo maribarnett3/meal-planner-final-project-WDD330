@@ -90,8 +90,46 @@ select {
 .logo {
   font-size: 1.5rem;
   font-weight: 600;
+  height: 37px;
   text-decoration: none;
   color: var(--primary);
+}
+
+.logo img {
+  height: 100%;
+}
+
+.favorite-count {
+  position: absolute;
+  top: 12px;
+  /* right: 0; */
+  background: red;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  font-size: 12px;
+  animation: shake-up-down 0.5s;
+}
+/*animation cart item shake up and down*/
+@keyframes shake-up-down {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-5px);
+  } /* Move up */
+  50% {
+    transform: translateY(5px);
+  } /* Move down */
+  75% {
+    transform: translateY(-5px);
+  } /* Move up again */
+  100% {
+    transform: translateY(0);
+  } /* Return to original position */
 }
 
 .navList {
