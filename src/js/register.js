@@ -1,4 +1,4 @@
-import { login } from "./auth.mjs";
+import { signup } from "./auth.mjs";
 
 // login.js
 document.addEventListener("DOMContentLoaded", () => {
@@ -9,16 +9,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
+    const name = document.getElementById("name").value;
+    const address = document.getElementById("address").value;
 
     if (!username || !password) {
       alert("Please enter both username and password.");
       return;
     }
 
-    login({ email: username, password });
+    signup({ email: username, password, name, address });
   });
   document.querySelector("#registerButton").addEventListener("click", (e) => {
     e.preventDefault();
-    window.location = "/register/index.html";
+    window.location = "/login/index.html";
   })
 });

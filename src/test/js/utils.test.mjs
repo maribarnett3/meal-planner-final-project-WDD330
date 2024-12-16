@@ -200,16 +200,17 @@ describe("loadHeaderFooter", () => {
   });
 
   it("should load templates into header and footer", async () => {
-    const templateHtml = "<div>Header/Footer Content</div>";
+    const templateHtml = `<div>Header <nav><ul class="navList"></ul></nav> /Footer Content</div>`;
     global.fetch = vi.fn(() =>
       Promise.resolve({
         ok: true,
         text: () => Promise.resolve(templateHtml),
       })
     );
+    const expectedHtml = `<div>Header <nav><ul class="navList"><li><a href="/login/index.html"><button id="loginBtn" class="login-btn">Login</button></a></li></ul></nav> /Footer Content</div>`
 
     await loadHeaderFooter();
-    expect(document.getElementById("main-header").innerHTML).toBe(templateHtml);
+    expect(document.getElementById("main-header").innerHTML).toBe(expectedHtml);
     expect(document.getElementById("main-footer").innerHTML).toBe(templateHtml);
   });
 });
